@@ -78,4 +78,6 @@ TODO
 
 ----
 ## Thanks
+![pusheen](https://media.tenor.co/images/550650fe51ac8b77091ce7292b7641ee/raw)
+
 Special thanks to Ingrid Spangler for introducing me to this great hobby.
