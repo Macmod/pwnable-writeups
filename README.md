@@ -8,7 +8,7 @@ Only Toddler's Bottle challenges are included ~~because I didn't solve the other
 ----
 ## Tips
 
-Suppose you are stuck but don't want to spoil the fun.
+Suppose you are stuck but don't want to spoil all the fun.
 
 Here are some quick tips that may help you along the way:
 
@@ -27,7 +27,7 @@ You can't reverse a packed binary.
 ### passcode
 Read about the Procedure Linkage Table (PLT) and the Global Offset Table (GOT).
 
-This [article](http://blog.isis.poly.edu/exploitation%20mitigation%20techniques/exploitation%20techniques/2011/06/02/relro-relocation-read-only/) and this entry on [exploit-db](https://www.exploit-db.com/papers/13203/) are also very enlightening.
+[This article](http://blog.isis.poly.edu/exploitation%20mitigation%20techniques/exploitation%20techniques/2011/06/02/relro-relocation-read-only/) and [this entry on exploit-db](https://www.exploit-db.com/papers/13203/) are also very enlightening.
 
 ### random
 Random values need proper seeding, otherwise they become [predictable](http://stackoverflow.com/questions/1108780/why-do-i-always-get-the-same-sequence-of-random-numbers-with-rand).
@@ -74,7 +74,7 @@ Read about shellcode creation. If you feel you don't quite get the SmashTheStack
 [Writing 64-Bit Shellcode (Part 1)](http://null-byte.wonderhowto.com/how-to/writing-64-bit-shellcode-part-1-beginner-assembly-0161593/) & [Writing 64-Bit Shellcode (Part 2)](http://null-byte.wonderhowto.com/how-to/writing-64-bit-shellcode-part-2-removing-null-bytes-0161591/)
 
 ### unlink
-TODO
+Read [Exploiting the Heap](http://www.win.tue.nl/~aeb/linux/hh/hh-11.html).
 
 ----
 ## Thanks
