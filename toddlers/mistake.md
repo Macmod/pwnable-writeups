@@ -2,7 +2,7 @@
 
 A very common mistake among novice programmers is misuse of operator precedence.
 
-If take a look at the supplied code:
+If we take a look at the supplied code:
 
 ```c
 int fd;
@@ -27,9 +27,9 @@ printf("input password : ");
 scanf("%10s", pw_buf2);
 ```
 
-It reads the password, waits some of amount of time < 20s and asks for the password. We can't read the passsword file.
+It reads the password, waits some of amount of time < 20s and asks for the password. We can't read the password file.
 
-If we take a closer look at line `if(fd=open("/home/mistake/password",O_RDONLY,0400) < 0)`. We realize that, once < has precedence over =, fd is going to be 1, (int)true, or 0, (int)false, depending on the result of the call to open.
+Let's take a closer look at line `if(fd=open("/home/mistake/password",O_RDONLY,0400) < 0)`. We realize that, once < has precedence over =, fd is going to be 1, `(int)true`, or 0, `(int)false`, depending on the result of the call to open.
 
 Open returns the file descriptor associated with the file, which is a always a positive number. Therefore fd is going to be zero, `stdin`, and the call to read later on is going to read from `stdin` instead of the password file.
 
