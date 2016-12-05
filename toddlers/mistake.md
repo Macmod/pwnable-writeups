@@ -27,7 +27,7 @@ printf("input password : ");
 scanf("%10s", pw_buf2);
 ```
 
-It opens the password file, waits some of amount of time < 20s, reads the file descriptor stored in `fd` and asks for the password. We can't read the password file.
+It opens the password file, waits some amount of time < 20s, reads the file descriptor stored in `fd` and asks for the password. We can't read the password file.
 
 Let's take a closer look at line `if(fd=open("/home/mistake/password",O_RDONLY,0400) < 0)`. We realize that, once < has precedence over =, fd is going to be 1, `(int)true`, or 0, `(int)false`, depending on the result of the call to open.
 
