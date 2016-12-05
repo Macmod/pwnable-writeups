@@ -2,6 +2,7 @@
 In a real lottery, you choose distinct numbers.
 
 If you look at these lines of the supplied code:
+
 ```int match = 0, j = 0;
 for(i=0; i<6; i++){
     for(j=0; j<6; j++){
