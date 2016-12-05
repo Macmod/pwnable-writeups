@@ -16,6 +16,6 @@ There's no check for duplicates, which means we can supply the same number as ma
 
 We can then come up with a smart answer:
 
-```$ (for i in $(seq 50); do echo 1; sleep 1; printf "\x01\x01\x01\x01\x01\x01"; sleep 1; done; echo 3) | ./lotto```
+`$ (for i in $(seq 50); do echo 1; sleep 1; printf "\x01\x01\x01\x01\x01\x01"; sleep 1; done; echo 3) | ./lotto`
 
 And hit Ctrl-C as soon as we get the flag.
