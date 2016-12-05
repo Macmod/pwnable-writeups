@@ -54,7 +54,7 @@ Usage: upx [-123456789dlthVL] [-qvfk] [-o file] file..
 Commands:
   -1     compress faster                   -9    compress better
   --best compress best (can be slow for big files)
-**  -d     decompress                        -l    list compressed file**
+  -d     decompress                        -l    list compressed file
   -t     test compressed file              -V    display version number
   -h     give this help                    -L    display software license
 ...
