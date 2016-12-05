@@ -1,3 +1,5 @@
+# Coin1
+
 After some thought, we realize this problem is very easy to solve by hand.
 
 We send some range of coins, say `0 1 2 3 4 5`, and wait for the result. If it's a round number, that is, a number which equals zero modulus 10, the fake coin isn't in this range.
