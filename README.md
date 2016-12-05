@@ -74,7 +74,7 @@ Read about shellcode creation. If you feel you don't quite get the SmashTheStack
 [Writing 64-Bit Shellcode (Part 1)](http://null-byte.wonderhowto.com/how-to/writing-64-bit-shellcode-part-1-beginner-assembly-0161593/) & [Writing 64-Bit Shellcode (Part 2)](http://null-byte.wonderhowto.com/how-to/writing-64-bit-shellcode-part-2-removing-null-bytes-0161591/)
 
 ### unlink
-Watch LiveOverflow's [video on unlink() exploitation](https://www.youtube.com/watch?v=HWhzH--89UQ) and read [Exploiting the Heap](http://www.win.tue.nl/~aeb/linux/hh/hh-11.html).
+Watch LiveOverflow's videos on [malloc()/free()](https://www.youtube.com/watch?v=gL45bjQvZSU) & [unlink() exploitation](https://www.youtube.com/watch?v=HWhzH--89UQ) and read [Exploiting the Heap](http://www.win.tue.nl/~aeb/linux/hh/hh-11.html).
 
 [Once upon a free()](http://phrack.org/issues/57/9.html) is also very informative.
 
