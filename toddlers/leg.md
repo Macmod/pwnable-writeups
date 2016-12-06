@@ -45,7 +45,7 @@ The return value is `pc`, the `Program Counter`. What's that? Let's read on [Sta
 > For Thumb mode:
 > The value of the PC will be 4 bytes greater than the address of this instruction, but bit 1 of the PC is forced to 0 to ensure it is word aligned.
 
-Thus it's the address of the current instruction + 8, which here is `0x00008ce4` (36068).
+Thus it's the address of the current instruction `+8`, which here is `0x00008ce4` (36068).
 
 ## key2
 ```asm
@@ -59,7 +59,7 @@ Thus it's the address of the current instruction + 8, which here is `0x00008ce4`
 [...]
 ```
 
-Here we need some extra research. First we store `pc + 1` (0x00008d05) into `r6`, then we have a `bx r6`.
+Here we need some extra research. First we store `pc + 1` (`0x00008d05`) into `r6`, then we have a `bx r6`.
 Let's read about `bx` in the [manual](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0040d/Cabdcdci.html):
 
 > Syntax
@@ -77,7 +77,7 @@ We now know the instruction at the branch address, `0x00008d04`, is going to be 
 ```asm
 [...]
 0x00008d28 <+8>:	   mov r3, lr
-0x00008d2c <+12>:    mov r0, r3
+0x00008d2c <+12>:	   mov r0, r3
 [...]
 ```
 
