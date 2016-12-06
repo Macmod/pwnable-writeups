@@ -7,7 +7,7 @@ Only Toddler's Bottle challenges are included ~~because I didn't solve the other
 
 ## Disclaimer
 
-All examples using `python` refer to versions 2.* of the language. Python 3.* won't work out-of-the-box because of the way it handles encoding with utf-8.
+All examples using `python` refer to versions *2.** of the language. Python *3.** won't work out-of-the-box because of the way it handles encoding with utf-8.
 
 ----
 ## Tips
