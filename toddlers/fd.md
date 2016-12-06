@@ -15,7 +15,7 @@ if(!strcmp("LETMEWIN\n", buf)){
 
 It reads from some file descriptor we control and compares the value to `LETMEWIN`.
 
-Well, the file descriptor `0` refers to `stdin`, then we just have to provide 0+0x1234 to be able to input LETMEWIN.
+Well, the file descriptor `0` refers to `stdin`, then we just have to provide `0`+`0x1234` to be able to input LETMEWIN.
 
 ```bash
 $ python -c "print(0x1234)"
