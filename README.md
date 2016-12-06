@@ -5,6 +5,10 @@ Only Toddler's Bottle challenges are included ~~because I didn't solve the other
 
 > 3\. Challenges in Toddler's Bottle are allowed to freely post the solutions online. However, please refrain from posting solution for challenges in other categories. But if you insist, post easy ones (solved by many people) and do not spoil too much details for the sake of fun.
 
+## Disclaimer
+
+All examples using `python` refer to versions 2.* of the language. Python 3.* won't work out-of-the-box because of the way it handles encoding with utf-8.
+
 ----
 ## Tips
 
