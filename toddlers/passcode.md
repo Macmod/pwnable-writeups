@@ -74,7 +74,7 @@ Breakpoint 3, 0x080485b4 in login ()
 $3 = (void *) 0xffffccbc # passcode2
 ```
 
-Once we hit the first breakpoint, just print the address of $ebp-0x70. The same for `passcode1` and `passcode2`, which their respective offsets from $ebp.
+Once we hit the first breakpoint, just print the address of `$ebp-0x70` (`name`). The same for `passcode1` and `passcode2`, with their respective offsets from `$ebp`.
 
 If we subtract `name` from `passcode1` (0xffffccb8 - 0xffffcc58), we get 0x60 (96), thus the last 4 bytes of `name` are written to the initial value of passcode1.
 
