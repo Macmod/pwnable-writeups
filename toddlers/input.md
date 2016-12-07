@@ -34,8 +34,8 @@ And now:
 
 ```bash
 $ /tmp/inp/st1
-Let\'s see if you know how to give input to program
-Just give me correct inputs then you will get the flag :\)
+Let's see if you know how to give input to program
+Just give me correct inputs then you will get the flag :)
 Stage 1 clear!
 ```
 
@@ -66,8 +66,8 @@ $ echo -ne "\x00\x0a\x02\xff" > /tmp/inp/error
 ```bash
 $ /tmp/inp/st2
 Welcome to pwnable.kr
-Let\'s see if you know how to give input to program
-Just give me correct inputs then you will get the flag :\)
+Let's see if you know how to give input to program
+Just give me correct inputs then you will get the flag :)
 Stage 1 clear!
 Stage 2 clear!
 /tmp/inp/st2: line 1: 46968 Segmentation fault [...]
@@ -91,8 +91,8 @@ env $'\xde\xad\xbe\xef'=$'\xca\xfe\xba\xbe' ./input 1 2 3 4 5 6 7 8 9 10 11 12 1
 ```bash
 $ /tmp/inp/st3
 Welcome to pwnable.kr
-Let\'s see if you know how to give input to program
-Just give me correct inputs then you will get the flag :\)
+Let's see if you know how to give input to program
+Just give me correct inputs then you will get the flag :)
 Stage 1 clear!
 Stage 2 clear!
 Stage 3 clear!
@@ -122,8 +122,8 @@ $ cd /tmp/inp/
 $ echo -en "\x00\x00\x00\x00" > $'\x0a'
 $ ./st4
 Welcome to pwnable.kr
-Let\'s see if you know how to give input to program
-Just give me correct inputs then you will get the flag :\)
+Let's see if you know how to give input to program
+Just give me correct inputs then you will get the flag :)
 Stage 1 clear!
 Stage 2 clear!
 Stage 3 clear!
@@ -177,8 +177,8 @@ Now we run the program while waiting to send our bytes in background:
 $ ./st5 & (sleep 2; echo -en "\xde\xad\xbe\xef" | nc 0 1337)
 [1] 61347
 Welcome to pwnable.kr
-Let\'s see if you know how to give input to program
-Just give me correct inputs then you will get the flag :\)
+Let's see if you know how to give input to program
+Just give me correct inputs then you will get the flag :)
 Stage 1 clear!
 Stage 2 clear!
 Stage 3 clear!
