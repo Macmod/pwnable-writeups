@@ -29,7 +29,6 @@ Let's write a check program into /tmp/rand:
 #include <stdio.h>
 
 void main() {
-    unsigned int random;
     printf("%d\n", rand());
 }
 ```
@@ -45,7 +44,6 @@ Let's XOR it with `0xdeadbeef`:
 #include <stdio.h>
 
 void main() {
-    unsigned int random;
     printf("%d\n", rand() ^ 0xdeadbeef);
 }
 ```
