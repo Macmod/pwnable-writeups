@@ -9,6 +9,12 @@ Only Toddler's Bottle challenges are included ~~because I didn't solve the other
 
 All examples using `python` refer to versions *2.** of the language. Python *3.** won't work out-of-the-box because of the way it handles encoding with utf-8.
 
+## Todo
+
+1. `collision`, `cmd1`, `cmd2`, `codemap`, `uaf` and `asm` writeups.
+2. Do `memcpy` and `unlink` and their writeups.
+3. Translate to portuguese.
+
 ----
 ## Tips
 
@@ -67,7 +73,7 @@ Be creative with [bash](http://ss64.com/bash/). There's more than one solution.
 Read [this beginner's guide on Use-After-Free](http://garage4hackers.com/content.php?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development) and [this whitepaper on Dangling Pointers](https://www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf).
 
 ### codemap
-TODO
+Read about daehee's [codemap](http://codemap.kr/) plugin for IDA.
 
 ### memcpy
 TODO
