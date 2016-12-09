@@ -71,7 +71,7 @@ select ebx from traceX order by eax desc limit 3
 
 ![ida-answer](https://cloud.githubusercontent.com/assets/6147168/21038202/e763d222-bdba-11e6-960c-d23066a73723.PNG)
 
-We can now hover on top of the second and third points to see their `ebx` values:
+Then we hover on top of the second and third points to see their `ebx` values:
 
 `roKBkoIZGMUKrMb` and `2ckbnDUabcsMA2s`.
 
