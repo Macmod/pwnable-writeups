@@ -31,9 +31,9 @@ int main(int argc, char* argv[], char** envp){
 ```
 
 Things have changed. We can't use PATH, equal signs, exports, slashes...
-We can still get our flag, though. We just have to resort to other means, like using wildcards to get `flag` and ${VAR%???} substitutions to get a slash.
+We can still get our flag, though. We just have to resort to other means, like using wildcards to get `flag` and `${VAR%???}` substitutions to get a slash.
 
-${VAR%????} returns $VAR stripped of the last 4 characters. Let's test it:
+`${VAR%????}` returns `$VAR` stripped of the last 4 characters. Let's test it:
 
 ```bash
 $ ./cmd2 "echo \$PWD"
@@ -50,4 +50,4 @@ $ ./cmd2 "read cmd; \$cmd"
 /bin/cat flag
 ```
 
-Like `cmd1`, there are many other solutions left to the reader as an exercise. :)
+Like `cmd1`, there are many other solutions. Those are left to the reader as an exercise. :)
