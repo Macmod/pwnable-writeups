@@ -50,7 +50,7 @@ A graph appears on the top of the page and we see information about the register
 Let's put together a simple test query:
 
 ```sql
-select eax from *traceX* order by eax desc
+select eax from traceX order by eax desc
 ```
 
 Where *traceX* is the default table `codemap` has already filled in the query textbox.
@@ -59,7 +59,8 @@ We get this:
 
 ![ida-eax](https://cloud.githubusercontent.com/assets/6147168/21038203/e765c5d2-bdba-11e6-80ff-787851fd6eb9.PNG)
 
-We can see there are all kinds of values for eax within a range from `0x1b` (27) to `0x18627` (99879)
+We can see there are all kinds of values for eax within a range from `0x1b` (27) to `0x18627` (99879).
+
 But wait... `ebx` looks like the allocated strings and the maximum `eax` matches the biggest chunk size!
 
 We can now probably figure out the strings inside the 2nd and 3rd biggest chunks sending the right query:
@@ -71,5 +72,6 @@ select ebx from traceX order by eax desc limit 3
 ![ida-answer](https://cloud.githubusercontent.com/assets/6147168/21038202/e763d222-bdba-11e6-960c-d23066a73723.PNG)
 
 We can now hover on top of the second and third points to see their `ebx` values:
+
 `roKBkoIZGMUKrMb` and `2ckbnDUabcsMA2s`.
 
