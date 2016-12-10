@@ -11,9 +11,8 @@ All examples using `python` refer to versions *2.** of the language. Python *3.*
 
 ## Todo
 
-1. `memcpy` writeup.
-2. Do `unlink` and its writeup.
-3. Translate to portuguese.
+1. Do `unlink` and its writeup.
+2. Translate to portuguese.
 
 ----
 ## Tips
@@ -76,7 +75,7 @@ Read [this beginner's guide on Use-After-Free](http://garage4hackers.com/content
 Read about daehee's [codemap](http://codemap.kr/) plugin for IDA.
 
 ### memcpy
-Read about the [MOVNTPS](http://www.felixcloutier.com/x86/MOVNTPS.html) instruction.
+Read about the [MOVNTPS](http://www.felixcloutier.com/x86/MOVNTPS.html) instruction and [Alignment in C](https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2013_2014/epc-14-haase-svenhendrik-alignmentinc-paper.pdf).
 
 ### asm
 Read about shellcode creation. If you feel you don't quite get the SmashTheStack article yet, read this newbie-friendly guide:
