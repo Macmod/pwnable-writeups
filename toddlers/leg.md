@@ -50,12 +50,12 @@ Thus it's the address of the current instruction `+8`, which here is `0x00008ce4
 ## key2
 ```asm
 [...]
-0x00008cfc <+12>:	add	r6, pc, #1
-0x00008d00 <+16>:	bx	r6
-0x00008d04 <+20>:	mov	r3, pc
-0x00008d06 <+22>:	adds	r3, #4
+0x00008cfc <+12>:	add    r6, pc, #1
+0x00008d00 <+16>:	bx     r6
+0x00008d04 <+20>:	mov    r3, pc
+0x00008d06 <+22>:	adds   r3, #4
 [...]
-0x00008d10 <+32>:	mov	r0, r3
+0x00008d10 <+32>:	mov    r0, r3
 [...]
 ```
 
@@ -76,8 +76,8 @@ We now know the instruction at the branch address, `0x00008d04`, is going to be 
 ## key3
 ```asm
 [...]
-0x00008d28 <+8>:	   mov r3, lr
-0x00008d2c <+12>:	   mov r0, r3
+0x00008d28 <+8>:    mov r3, lr
+0x00008d2c <+12>:   mov r0, r3
 [...]
 ```
 
