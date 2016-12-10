@@ -40,9 +40,9 @@ Now let's take a look at the code for each key:
 
 The return value is `pc`, the `Program Counter`. What's that? Let's read on [StackOverflow](http://stackoverflow.com/questions/18330902/program-counter-in-arm-assembly):
 
-> For ARM mode:
-> When using R15 as the base register you must remember it contains an address 8 bytes on from the address of the current instruction.
-> For Thumb mode:
+> For ARM mode:  
+> When using R15 as the base register you must remember it contains an address 8 bytes on from the address of the current instruction.  
+> For Thumb mode:  
 > The value of the PC will be 4 bytes greater than the address of this instruction, but bit 1 of the PC is forced to 0 to ensure it is word aligned.
 
 Thus it's the address of the current instruction `+8`, which here is `0x00008ce4` (36068).
@@ -62,13 +62,13 @@ Thus it's the address of the current instruction `+8`, which here is `0x00008ce4
 Here we need some extra research. First we store `pc + 1` (`0x00008d05`) into `r6`, then we have a `bx r6`.
 Let's read about `bx` in the [manual](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0040d/Cabdcdci.html):
 
-> Syntax
-> The syntax of BX is one of:
-> 1. Thumb (BX Rn)
-> 2. ARM (BX{cond} Rn)
-> Where:
-> Rn is a register in the range r0 to r15 that contains the address to branch to. The value of bit 0 in this register determines the processor state:
-> if bit 0 is set, the instruction at the branch address is executed in Thumb state
+> Syntax  
+> The syntax of BX is one of:  
+> 1. Thumb (BX Rn)  
+> 2. ARM (BX{cond} Rn)  
+> Where:  
+> Rn is a register in the range r0 to r15 that contains the address to branch to. The value of bit 0 in this register determines the processor state:  
+> if bit 0 is set, the instruction at the branch address is executed in Thumb state  
 > if bit 0 is clear, the instruction at the branch address is executed in ARM state.
 
 We now know the instruction at the branch address, `0x00008d04`, is going to be executed in Thumb state, which from our previous reading means the `pc` is going to be 4 bytes on from the current instruction. Then it stores our new `pc` (`0x00008d08`) into `r3`, adds 4 to `r3` to get `0x00008d0c` and returns this value (36108).
