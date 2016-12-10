@@ -11,9 +11,8 @@ All examples using `python` refer to versions *2.** of the language. Python *3.*
 
 ## Todo
 
-1. `asm` writeup.
-2. Do `memcpy` and `unlink` and their writeups.
-3. Translate to portuguese.
+1. Do `memcpy` and `unlink` and their writeups.
+2. Translate to portuguese.
 
 ----
 ## Tips
