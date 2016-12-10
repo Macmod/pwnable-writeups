@@ -12,7 +12,7 @@ if(fd=open("/home/mistake/password",O_RDONLY,0400) < 0){
 }
 
 printf("do not bruteforce...\n");
-sleep(time(0)%20);o
+sleep(time(0)%20);
 
 char pw_buf[PW_LEN+1];
 int len;

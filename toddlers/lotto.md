@@ -1,4 +1,5 @@
 # Lotto
+
 In a real lottery, you choose distinct numbers.
 
 If you look at these lines of the supplied code:
