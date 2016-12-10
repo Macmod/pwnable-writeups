@@ -1,6 +1,6 @@
 # Asm
 
-For this challenge we have to write some shellcode. If you don't know what these are, shellcode is machine code used to exploit buffer overflows, commonly created to spawn a shell. We'll work locally to save time.
+For this challenge we have to write some shellcode. If you don't know what this is, it's machine code used to exploit buffer overflows, commonly created to spawn a shell. We'll work locally to save time.
 
 Let's read the code:
 
@@ -52,9 +52,9 @@ void main() {
 
 We need to do this in assembly, though. For this we'll need to keep a few things in mind:
 
-1. Our calling convention, `System V`, in which arguments are stored in the `rdi`, `rsi`, `rdx`, `rcx`, `r8`, `r9`, `xmm0`–`xmm7` registers, in this order, and return values are stored in `rax`.
-2. The syscall codes for read, write and open:
-3. We can always compile C to assembly with `$ gcc -S <file.c> -o <file>`, in case we need help with something.
+1. We can always compile C to assembly with `$ gcc -S <file.c> -o <file>`, in case we need help with something.
+2. Our calling convention, `System V`, in which arguments are stored in the `rdi`, `rsi`, `rdx`, `rcx`, `r8`, `r9`, `xmm0`–`xmm7` registers, in this order, and return values are stored in `rax`.
+3. The syscall codes for read, write and open:
 
 | call  | asm                      |
 |-------|--------------------------|
@@ -136,9 +136,9 @@ name:
     .string "this_is_pwnable.kr_flag_file_please_read_this_file.sorry_the_file_name_is_very_loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0000000000000000000000000ooooooooooooooooooooooo000000000000o0o0o0o0o0o0ong"
 ```
 
-Why are we jumping to jmp_here and then calling jmp_back again? Because when we make a call, the return address is pushed onto the stack. Here the return address will be the address of `name`, which is now in the text segment.
+Why are we jumping to `jmp_here` and then calling `jmp_back` again? Because when we make a call, the return address is pushed onto the stack. Here the return address will be the address of `name`, which is now in the text segment.
 
-Right after the jmp_here jump, in jmp_back, we pop this address and store in `rdi`, the first argument of the `open` syscall later on. Lastly we add a `0x80` syscall (interrupt) to make sure our program doesn't loop forever. Genius!
+Right after the `jmp_here` jump, in `jmp_back`, we pop this address and store in `rdi`, the first argument of the `open` syscall later on. Lastly we add a `0x80` syscall (interrupt) to make sure our program doesn't loop forever. Genius!
 
 We can now get our shellcode:
 
