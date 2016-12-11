@@ -86,7 +86,7 @@ int main(void){
 }
 ```
 
-It seems understandable. There's a `fast_memcpy`, which copies 64-byte blocks using some instructions we don't know, and a `slow_memcpy` which simply performs a byte-to-byte copy. The `fast_memcpy` only works
+It seems understandable. There's a `fast_memcpy`, which copies 64-byte blocks using some instructions we don't know, and a `slow_memcpy` which simply performs a byte-to-byte copy. The `fast_memcpy` only copies 64-byte blocks if the buffer size is >= 64. Whatever is left uncopied, also, is then copied byte-to-byte with `slow_memcpy`.
 
 Let's compile and run it locally. Remember to compile with `-m32` as instructed in the code:
 
